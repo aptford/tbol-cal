@@ -1,0 +1,23 @@
+# fly.toml app configuration file generated for tbol-cal-com on 2024-07-10T21:04:57+08:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'tbol-cal-com'
+primary_region = 'ewr'
+
+[build]
+  dockerfile = './Dockerfile'
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 0
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
+
