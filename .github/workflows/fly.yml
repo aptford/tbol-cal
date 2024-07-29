@@ -81,5 +81,5 @@ jobs:
           flyctl deploy --build-arg DATABASE_URL=${{ steps.secret-fetcher.outputs.DATABASE_URL }} \
                         --build-arg NEXTAUTH_SECRET=${{ steps.secret-fetcher.outputs.NEXTAUTH_SECRET }} \
                         --build-arg CALENDSO_ENCRYPTION_KEY=${{ steps.secret-fetcher.outputs.CALENDSO_ENCRYPTION_KEY }} \
-                        --build-arg NEXT_PUBLIC_WEBAPP_URL=${{ steps.secret-fetcher.outputs.NEXT_PUBLIC_WEBAPP_URL }}
+                        --build-arg NEXT_PUBLIC_WEBAPP_URL=${{ steps.secret-fetcher.outputs.NEXT_PUBLIC_WEBAPP_URL }} \
                         --build-arg GOOGLE_API_CREDENTIALS=${{ steps.secret-fetcher.outputs.GOOGLE_API_CREDENTIALS }}
